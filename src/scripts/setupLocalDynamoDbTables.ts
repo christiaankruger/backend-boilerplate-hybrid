@@ -1,6 +1,9 @@
 /*
   Use this script to setup your local DynamoDb tables
   Replace the dummy info with whatever your requirements are.
+
+  You can run this with:
+  ts-node src/scripts/setupLocalDynamoDbTables.ts
 */
 
 import { Dynatron } from 'dynatron';
@@ -14,6 +17,7 @@ const d = new Dynatron({
     secretAccessKey: 'localhost',
   },
 });
+
 d.Tables.create({
   TableName: 'dummy-table',
   ProvisionedThroughput: {
